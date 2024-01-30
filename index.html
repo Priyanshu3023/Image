@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phalana Dhekana Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('<a href="https://imgbb.com/"><img src="https://i.ibb.co/GCLPjW9/IMG-20240128-WA0032.jpg" alt="IMG-20240128-WA0032" border="0"></a><a href="https://ibb.co/JqG2CLC"><img src="https://i.ibb.co/ZSFKNsN/Screenshot-2024-01-29-18-08-42-11-1c337646f29875672b5a61192b9010f9.jpg" alt="Screenshot-2024-01-29-18-08-42-11-1c337646f29875672b5a61192b9010f9" border="0"></a>')
+ no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #loginPopup {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    input {
+      margin: 10px;
+      padding: 8px;
+    }
+
+    button {
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    #welcomePage {
+      display: none;
+      text-align: center;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="loginPopup">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <br>
+    <input type="password" id="password" placeholder="Password">
+    <br>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="welcomePage">
+    <h2>Welcome to Phalana Dhekana Website</h2>
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Simple validation for demonstration purposes
+      if (username === 'Priyanshu234' && password === 'nandan234') {
+        document.getElementById('loginPopup').style.display = 'none';
+        document.getElementById('welcomePage').style.display = 'block';
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    }
+  </script>
+
+</body>
+  </html>
